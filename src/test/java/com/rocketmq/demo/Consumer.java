@@ -47,6 +47,7 @@ public class Consumer {
 		}
 	}
 	
+	
 	public static void consumer2(String topic, String tags){
 		consumer = new DefaultMQPushConsumer("PushConsumer pull");
 		consumer.setNamesrvAddr("localhost:9876");
