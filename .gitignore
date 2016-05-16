@@ -1,0 +1,9 @@
+target
+.classpath
+.project
+.settings
+LOG_HOME_IS_UNDEFINED
+*.min.js
+*.min.css
+*.min.html
+rebel.xml
