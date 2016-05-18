@@ -26,6 +26,8 @@ public class Consumer {
 	public static void consumer(String topic, String tags){
 		consumer = new DefaultMQPushConsumer(topic + "_" + tags);
 		consumer.setNamesrvAddr("localhost:9876");
+		consumer.setConsumeMessageBatchMaxSize(2);
+		
 		try {
 			//订阅PushTopic下Tag为push的消息
 			consumer.subscribe(topic, tags);
@@ -81,8 +83,7 @@ public class Consumer {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		consumer("PushTopic", "push");
-		consumer("PushTopic", "pull");
+		consumer("PushTopic", "push||pull");
 	}
 
 }
